@@ -35,11 +35,14 @@ enum	err_codes
 */
 
 /*
-** --------------- init functions
+** --------------- init functions (in order)
 */
+
+bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs);
 bool			window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGHT);
 bool			renderer_init(SDL_Renderer **renderer);
 bool			surface_init(SDL_Surface **win_surface, SDL_Window *window);
+void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs);
 
 /*
 ** --------------- event stuff 

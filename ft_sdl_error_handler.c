@@ -1,4 +1,4 @@
-#include "ft_sdlh.h"
+#include "ft_minilibsdl.h"
 
 static const char *error_messages[__ERR_CODE_NUMBER] = {
 	NULL, // because error_messages[SDL_ERROR] shouldn't exist.
