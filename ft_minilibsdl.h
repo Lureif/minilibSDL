@@ -4,9 +4,9 @@
 # include <stdio.h>
 # include <math.h>
 # include <stdbool.h>
-# define WIN_TITLE "INSERT WINDOW TITLE HERE"
-# define WIN_HEIGHT 500
-# define WIN_WIDTH 500
+# define WIN_TITLE "PINKBOI PLATFORMER"
+# define WIN_HEIGHT 600
+# define WIN_WIDTH 600
 # define NO_FLAGS 0
 
 typedef	struct		s_SDL_OBJS
@@ -40,16 +40,14 @@ enum	err_codes
 
 bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs);
 bool			window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGHT);
-bool			renderer_init(SDL_Renderer **renderer);
+bool			renderer_init(SDL_Window **window, SDL_Renderer **renderer);
 bool			surface_init(SDL_Surface **win_surface, SDL_Window *window);
-void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs);
+void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs, bool surfacep);
 
 /*
 ** --------------- event stuff 
 */
 void			event_loop(SDL_Window *window);
-void			render_to_window(SDL_Renderer *renderer, SDL_Rect what_thy_want);
-
 /*
 **  --- error hanling
 */
