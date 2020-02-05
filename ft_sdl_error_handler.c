@@ -21,5 +21,5 @@ void	error_handler(const char *err_source, const char *err_function, int err_cod
 		strcat_w_endl(err_str, SDL_GetError(), "\n\0");
 	else
 		strcat_w_endl(err_str, error_messages[err_code], "\n\0");
-	printf("%s", err_str); // to be replaced with ft_putstr(err_str);
+	printf("%s\n", err_str); // to be replaced with ft_putstr(err_str);
 }

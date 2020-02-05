@@ -6,7 +6,7 @@
 #    By: brjorgen <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/14 17:44:13 by brjorgen          #+#    #+#              #
-#    Updated: 2019/04/15 20:07:02 by brjorgen         ###   ########.fr        #
+#    Updated: 2020/02/03 08:27:39 by brjorgen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME   = 	libft.a
 
 CC     =	gcc
 
-CFLAGS =	-Wall -Werror -Wextra
+CFLAGS =	-Wall -Werror -Wextra -g
 
 NAME   =	minilibsdl.a
 
@@ -31,7 +31,7 @@ OBJ     =	$(SRCS:%.c=%.o)
 HEADER  =	ft_minilibsdl.h
 
 %.o	: 	%.c $(HEADER)
-		$(CC) -o $@ -c $< $(CFLAGS) -lSDL2
+		$(CC) -o $@ -c $< $(CFLAGS)
 
 all 	:	$(NAME)
 

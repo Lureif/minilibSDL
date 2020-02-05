@@ -1,6 +1,6 @@
 #ifndef FT_SDLH_H
 # define FT_SDLH_H
-# include <SDL2/SDL.h>
+# include "../minilibSDL/SDL_SOURCE/include/SDL.h"
 # include <stdio.h>
 # include <math.h>
 # include <stdbool.h>
@@ -38,9 +38,9 @@ enum	err_codes
 ** --------------- init functions (in order)
 */
 
-bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs);
+bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs, bool renderer);
 bool			window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGHT);
-bool			renderer_init(SDL_Window **window, SDL_Renderer **renderer);
+bool			renderer_init(SDL_Window *window, SDL_Renderer **renderer);
 bool			surface_init(SDL_Surface **win_surface, SDL_Window *window);
 void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs, bool surfacep);
 
