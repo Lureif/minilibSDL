@@ -4,12 +4,12 @@ bool	window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGH
 {
 	if (!WIN_NAME || !WIDTH || !HEIGHT)
 	{
-		error_handler("USER", "window_init", MISSING_WIN_SPEC);
+		sdl_error_handler("USER", "window_init", MISSING_WIN_SPEC);
 		return (false);
 	}
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
-		error_handler("SDL", "window_init", SDL_ERROR);
+		sdl_error_handler("SDL", "window_init", SDL_ERROR);
 		return (false);
 	}
 	if (!(*window = SDL_CreateWindow(WIN_NAME,
@@ -19,7 +19,7 @@ bool	window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGH
 					HEIGHT,
 					/*SDL_WINDOW_SHOWN*/ 0)))
 	{
-		error_handler("SDL", "window_init", SDL_ERROR);
+		sdl_error_handler("SDL", "window_init", SDL_ERROR);
 		return (false);
 	}
 	return (true);

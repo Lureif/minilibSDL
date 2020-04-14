@@ -1,10 +1,10 @@
 #include "ft_minilibsdl.h"
 
-bool	surface_init(SDL_Surface **win_surface, SDL_Window *window)
+bool	surface_init(SDL_Window *window, SDL_Surface **win_surface)
 {
 	if (!(*win_surface = SDL_GetWindowSurface(window)))
 	{
-		error_handler("SDL", "surface_init", SDL_ERROR);
+		sdl_error_handler("SDL", "surface_init", SDL_ERROR);
 		return (false);
 	}
 	return (true);

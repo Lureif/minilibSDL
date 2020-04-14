@@ -11,7 +11,7 @@ void	strcat_w_endl(char *stackstr, const char *txt, const char *endl_char)
 	strcpy(stackstr + strlen(stackstr), endl_char);
 }	// can't tell if this is retarded or not yet
 
-void	error_handler(const char *err_source, const char *err_function, int err_code)
+void	sdl_error_handler(const char *err_source, const char *err_function, int err_code)
 {
 	static char err_str[256];
 

@@ -4,12 +4,12 @@ void	ft_sdl_cleanup(t_SDL_OBJS *sdl_objs, bool surfacep)
 {
 	if (surfacep == true)
 	{
-		SDL_FreeSurface(sdl_objs->win_surface);
+		SDL_FreeSurface(sdl_objs->surface);
 		printf("freed surface\n");
 	}
-	if (sdl_objs->render_surface)
+	if (sdl_objs->renderer)
 	{
-		SDL_DestroyRenderer(sdl_objs->render_surface);
+		SDL_DestroyRenderer(sdl_objs->renderer);
 		printf("doestroyed renderer\n");
 	}
 	if (sdl_objs->window)

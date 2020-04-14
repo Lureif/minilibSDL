@@ -18,13 +18,14 @@ CFLAGS =	-Wall -Werror -Wextra -g
 
 NAME   =	minilibsdl.a
 
-SRCS   =	ft_sdl_error_handler.c 	\
-		ft_sdl_renderer_init.c 	\
-		ft_sdl_window_init.c	\
-		ft_sdl_event_loop.c	\
-		ft_sdl_surface_init.c  	\
-		ft_sdl_cleanup.c	\
-		ft_sdl_full_init.c
+SRCS   =	ft_sdl_error_handler.c 		\
+		ft_sdl_renderer_init.c 		\
+		ft_sdl_window_init.c		\
+		ft_sdl_surface_init.c  		\
+		ft_sdl_cleanup.c		\
+		ft_sdl_full_init.c		\
+		ft_sdl_generic_event_loop.c	\
+		ft_sdl_check_quit.c
 
 OBJ     =	$(SRCS:%.c=%.o)
 
