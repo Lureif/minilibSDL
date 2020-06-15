@@ -37,10 +37,18 @@ enum	err_codes
 /*
 ** --------------- init functions (in order)
 */
-bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs, bool rendererp);
-bool			window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGHT);
-bool			renderer_init(SDL_Window *window, SDL_Renderer **renderer);
-bool			surface_init(SDL_Window *window, SDL_Surface **win_surface);
+bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs,
+					 const size_t dimentions[2],
+					 const char *win_title,
+					 const bool rendererp);
+bool			window_init(SDL_Window **window,
+				    const char *win_name,
+				    const size_t width,
+				    const size_t height);
+bool			renderer_init(SDL_Window *window,
+				      SDL_Renderer **renderer);
+bool			surface_init(SDL_Window *window,
+				     SDL_Surface **win_surface);
 void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs, bool surfacep);
 
 /*
@@ -58,5 +66,4 @@ void			strcat_w_endl(char *stackstr, const char *txt, const char *endl_char);
 /*
 ** end boilerplate
 */
-
 #endif

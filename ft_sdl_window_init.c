@@ -1,8 +1,8 @@
 #include "ft_minilibsdl.h"
 
-bool	window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGHT)
+bool	window_init(SDL_Window **window, const char *win_name, const size_t width, const size_t height)
 {
-	if (!WIN_NAME || !WIDTH || !HEIGHT)
+	if (!win_name || !width || !height)
 	{
 		sdl_error_handler("USER", "window_init", MISSING_WIN_SPEC);
 		return (false);
@@ -12,12 +12,12 @@ bool	window_init(SDL_Window **window, const char *WIN_NAME, int WIDTH, int HEIGH
 		sdl_error_handler("SDL", "window_init", SDL_ERROR);
 		return (false);
 	}
-	if (!(*window = SDL_CreateWindow(WIN_NAME,
+	if (!(*window = SDL_CreateWindow(win_name,
 					SDL_WINDOWPOS_CENTERED,
 					SDL_WINDOWPOS_CENTERED,
-					WIDTH,
-					HEIGHT,
-					/*SDL_WINDOW_SHOWN*/ 0)))
+					width,
+					height,
+					0)))
 	{
 		sdl_error_handler("SDL", "window_init", SDL_ERROR);
 		return (false);
