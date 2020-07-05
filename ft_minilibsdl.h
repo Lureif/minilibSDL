@@ -5,8 +5,6 @@
 # include <math.h>
 # include <stdbool.h>
 # define WIN_TITLE "PINKBOI PLATFORMER"
-# define WIN_HEIGHT 600
-# define WIN_WIDTH 600
 # define NO_FLAGS 0
 
 typedef	struct		s_SDL_OBJS
@@ -38,7 +36,7 @@ enum	err_codes
 ** --------------- init functions (in order)
 */
 bool			ft_sdl_full_init(t_SDL_OBJS *sdl_objs,
-					 const size_t dimentions[2],
+					 const int dimentions[2],
 					 const char *win_title,
 					 const bool rendererp);
 bool			window_init(SDL_Window **window,
@@ -46,7 +44,7 @@ bool			window_init(SDL_Window **window,
 				    const size_t width,
 				    const size_t height);
 bool			renderer_init(SDL_Window *window,
-				      SDL_Renderer **renderer);
+				      SDL_Renderer **renderer, const int dimentions[2]);
 bool			surface_init(SDL_Window *window,
 				     SDL_Surface **win_surface);
 void			ft_sdl_cleanup(t_SDL_OBJS *sdl_objs, bool surfacep);
